@@ -1,0 +1,718 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 120px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    z-index: 100;
+    overflow-x: hidden;
+
+}
+
+.header.sticky{
+    padding: 15px 120px;
+    background-color: #ffffff;
+}
+
+.header .logo{
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.6s;
+}
+
+.header .toggle{
+    display: none;
+}
+
+.nav{
+    display: inline-block;
+    position: relative;
+    margin-top: 8px;
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+    position: relative;
+}
+
+.nav ul li a{
+    position: relative;
+    text-decoration: none;
+    color: black;
+    padding: 0 24px;
+    font-size: 16px;
+    transition: 0.5s;
+    font-weight: 500;
+}
+
+/* .nav ul li a:hover{
+    font-weight: 450;
+} */
+
+.hero{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: rgba(247, 228, 168, 0.36);
+    overflow-x: hidden;
+}
+
+.hero-circle{
+    position: absolute;
+    z-index: 10;
+    width: 560px;
+    height: 560px;
+    border-radius: 50%;
+    background-color: #CDEF96;
+    right: 0;
+    margin-top: -156px;
+    margin-right: -156px;
+    overflow-x: hidden;
+    opacity: 0.42;
+}
+
+.content{
+    display: flex;
+    padding: 150px 120px;
+    justify-content: space-between;
+    font-weight: 600;
+    width: 100%;
+}
+
+.hero-content{
+    position: relative;
+    max-width: 600px;
+    padding: 50px 0 0;
+}
+
+.hero-content h2, h4{
+    margin-bottom: 25px;
+}
+
+.hero-content h2{
+    font-size: 2.5em;
+}
+
+.hero-content h4{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.hero-content .second-br{
+    display: none;
+}
+
+.hero-content button{
+    padding: 8px 24px;
+    background: #CDEF96;
+    cursor: pointer;
+    transition: 0.6s;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    font-weight: 550;
+}
+
+.hero-visual{
+    position: relative;
+    width: 450px;
+    padding: 0 0 0 20px;
+}
+
+.img-1, .img-2, .img-3, .img-4{
+    position: absolute;
+}
+
+.img-1{
+    margin-top: 157px;
+    z-index: 13;
+}
+
+.img-2{
+    margin-left: 100px;
+    margin-top: -35px;
+    z-index: 11;
+}
+
+.img-3{
+    z-index: 12;
+    margin-top: 128px;
+    margin-left: -140px;
+}
+
+.img-4{
+    z-index: 12;
+    margin-top: 128px;
+    margin-left: 195px;
+}
+
+.section-title{
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* -------------- ABOUT -------------- */
+.about-us{
+    width: 100%;
+    height: 450px;
+    padding: 70px 200px 25px;
+}
+
+.about-content{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.about-images{
+    border-radius: 10px;
+    height: 240px;
+    width: 180px;
+    object-fit: cover;
+}
+
+.about-text{
+    width: 600px;
+    padding: 20px 10px;
+}
+
+.about-text p{
+    font-size: 18px;
+}
+
+/* -------------- OUR FOOD -------------- */
+.our-food{
+    width: 100%;
+    height: 800px;
+    padding: 70px 120px 25px;
+    background: #FBF3E0;
+}
+
+.our-food .content{
+    padding: 20px 0;
+    justify-content: space-evenly;
+}
+
+.our-food .content .left-side, .right-side{
+    width: 500px;
+}
+
+.our-food .content h4{
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.our-food .content p{
+    font-weight: normal;
+}
+
+.food-exp-1, .food-exp-2{
+    display: flex;
+    padding: 20px 10px;
+}
+
+.food-exp-1 img, .food-content{
+    padding: 0 10px;
+}
+
+.divider-line {
+    border-left: 2.5px solid rgb(202, 202, 202);
+    height: 500px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+/* -------------------- MENU --------------------*/
+.menu{
+    width: 100%;
+    height: 900px;
+    padding: 70px 200px 25px;
+}
+
+.menu-grid{
+    display: grid;
+    grid-template-areas: 
+    "card card card card"
+    "card card card card"
+    "payment payment payment payment";
+    grid-row-gap: 20px;
+}
+
+.card{
+    display: inline-block;
+    border: 3px solid #E2E2E2;
+    border-radius: 8px;
+    width: 240px;
+    height: 320px;
+}
+
+.card-header{
+    padding: 8px 10px;
+    margin-bottom: 0;
+}
+
+.card-img{
+    display: flex;
+    background: rgba(255, 209, 152, 0.679);
+    justify-content: center;
+    height: 155px;
+}
+
+.card-img img{
+    object-fit: none;
+}
+
+.card-content{
+    padding: 10px 20px;
+}
+
+.menu-choices{
+    padding: 5px 0;
+}
+
+.menu-choices .menu-meat{
+    display: inline-block;
+    width: 70px;
+}
+
+.menu-choices .add-button, .minus-button{
+    padding: 2px;
+    cursor: pointer;
+    transition: 0.6s;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.menu-choices .add-button{
+    background: #defdb0;
+    
+}
+
+.menu-choices .minus-button{
+    background: #ffb59b;
+}
+
+.menu-choices .menu-input{
+    display: inline-block;
+    width: 25px;
+    padding: 2px 4px;
+    justify-content: center;
+}
+
+.menu-choices .menu-price{
+    display: inline-block;
+    width: 25px;
+    margin-left: 10px;
+}
+
+.card-content .menu-button{
+    display: flex;
+    padding: 8px 16px;
+    background: #CDEF96;
+    cursor: pointer;
+    transition: 0.6s;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 8px;
+}
+
+.payment{
+    display: flex;
+    justify-content: center;
+    grid-area: payment;
+    margin: 20px 0;
+}
+
+.payment button{
+    padding: 8px 24px;
+    background-color: rgba(0, 78, 138, 0.985);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.payment i, 
+.payment span{
+    padding: 0 5px;
+    color: white;
+}
+
+.payment span{
+    font-weight: 600;
+}
+
+/* -------------------- Contact -------------------- */
+.contact{
+    width: 100%;
+    height: 220px;
+    padding: 30px 200px 25px;
+    background: #e4ffb9a1;
+}
+
+.contact-content{
+    margin: auto;
+    width: 800px;
+    font-size: 17.5px;
+    font-weight: 500;
+    text-align: center;
+    color: #564f4fb1;
+}
+
+.contact-button{
+    display: flex;
+    cursor: pointer;
+    background: rgb(51, 161, 51);
+    transition: 0.6s;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 8px 24px;
+    margin: auto;
+    margin-top: 15px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.mobile-contact-content{
+    display: none;
+}
+
+/* -------------------- Footer -------------------- */
+.footer{
+    padding: 30px 100px;
+    display: grid;
+    grid-template-columns: 
+    "media-social"
+    "footer-nav"
+    "company-name";    
+    height: 130px;
+    background: rgb(47, 47, 47);
+    justify-content: center;
+    grid-auto-flow: row;
+
+}
+
+.footer .media-social{
+    display: flex;
+    width: 400px;
+    justify-content: space-evenly;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.footer .media-social a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer .footer-nav{
+    width: 400px;
+}
+
+.footer-nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.footer-nav ul li a{
+    text-decoration: none;
+    padding: 0 5px;
+    color: white;
+}
+
+.footer .company-name{
+    display: flex;
+    justify-content: center;
+}
+
+.footer .company-name a{
+    padding: 10px 0;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+@media only screen and (max-width: 1279px) {
+
+    .header{
+        top: 0;
+        padding: 25px 70px;
+        background-color: #ffffff;
+    }
+
+    .header.sticky{
+        padding: 15px 70px;
+    }
+
+    .header .toggle{
+        display: inline-block;
+        font-size: 20px;
+    }
+
+    .nav{
+        position: fixed;
+        display: block;
+        justify-content: center;
+        top: 45px;
+        right: -300px;
+        /* right: 0; */
+        width: 300px;
+        height: 100vh;
+        background-color: rgb(255, 255, 255);
+        z-index: 100;
+        transition: 0.5s ease-in;
+        padding: 50px 0;
+    }
+
+    .nav ul{
+        display: block;
+    }
+
+    .nav ul li{
+        margin: 45px 0;
+    }
+
+    .nav ul li a{
+        display: block;
+        font-size: 24px;
+        font-weight: 550;
+    }
+
+    #nav.active{
+        right: 0;
+    }
+
+    .hero{
+        height: 500px;
+    }
+
+
+    .content{
+        padding: 100px 120px;
+        justify-content: center;
+    }
+
+    .hero-content{
+        z-index: 14;
+        text-align: center;
+    }
+
+    .hero-visual{
+        display: none;
+    }
+
+    /* ABOUT */
+    .about-us{
+        padding: 70px 80px 25px;
+    }
+
+    .about-text{
+        width: 400px;
+        padding: 10px;
+
+    }
+
+    /* OUR FOOD */
+    .our-food{
+        height: 1270px;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .our-food .divider-line{
+        display: none;
+    }
+
+    .our-food .content{
+        display: block;
+    }
+
+    .our-food .content .left-side, 
+    .our-food .content .right-side{
+        width: auto;
+    }
+
+    .right-side .food-exp-1, 
+    .right-side .food-exp-2{
+       flex-direction: row-reverse;
+    }
+
+    .right-side .food-exp-1:first-child{
+        margin-top: 10px;
+    }
+
+    /* --------------- MENU ---------------*/
+    .menu{
+        height: 1680px;
+        padding: 70px 80px 25px;
+    }
+
+    .menu .section-title{
+        margin-bottom: 30px;
+    }
+
+    .menu-grid{
+    grid-template-areas: 
+        "card card"
+        "card card"
+        "card card" 
+        "card card"
+        "payment payment";
+    grid-column-gap: 20px;
+    justify-content: space-evenly;
+    grid-row-gap: 40px;
+    }
+
+    .payment{
+        grid-area: "payment";
+        width: 100%;
+
+
+    }
+
+    /* --------------- CONTACT --------------- */
+    .contact{
+        padding: 30px 70px 25px;
+    }
+
+    .contact-content{
+        width: 650px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* ----- HEADER ----- */
+    .header{
+        padding: 25px 50px;
+    }
+
+    .header.sticky{
+        padding: 25px 50px;
+    }
+
+    /* ----- HERO ----- */
+    .hero{
+        height: 450px;
+    }
+    .hero-circle{
+        margin-top: -272px;
+        margin-right: -337px;
+    }
+    
+    .hero .content{
+        padding: 70px 30px 25px;
+    }
+
+    .hero-content h2{
+        font-size: 2.3em;
+    }
+
+    .hero-content h2 .second-br{
+        display: block;
+    }
+
+    .hero-content h2 .first-br,
+    .hero-content h4 br{
+        display: none;
+    }
+
+    /* ----- ABOUT ----- */
+    .about-us{
+        height: 800px;
+        padding: 70px 30px 25px;
+    }
+    .about-content{
+        flex-wrap: wrap;
+    }
+
+    .about-text{
+        margin-top: 10px;
+        width: 300px;
+        text-align: justify;
+    }
+
+    /* ----- OUR FOOD ----- */
+    .our-food{
+        height: 2150px;
+        padding: 70px 50px 25px;;
+    }
+
+    .left-side .food-exp-1, 
+    .left-side .food-exp-2, 
+    .right-side .food-exp-1, 
+    .right-side .food-exp-2{
+        flex-direction: unset;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .food-content{
+        margin-top: 15px;
+    }
+
+    .left-side .food-exp-2 .food-content, 
+    .right-side .food-exp-2 .food-content{
+        order: 2;
+    }
+
+    .food-content .food-title{
+        text-align: center;
+    }
+
+    /* ----- MENU ----- */
+    .menu{
+        height: 3100px;
+    }
+
+    .menu-grid{
+        grid-template-areas: 
+        "card"
+        "card"
+        "card"
+        "card"
+        "card"
+        "card"
+        "card"
+        "card"
+        "payment";
+    }
+
+    .payment{
+        margin-top: 10px;
+    }
+
+    .payment button{
+        padding: 8px 40px;
+    }
+
+    /* ----- CONTACT ----- */
+    .contact{
+        height: 300px;
+        padding: 70px 50px 25px;
+    }
+
+    .contact-content{
+        display: none;
+    }
+
+    .mobile-contact-content{
+        display: block;
+        width: 300px;
+        text-align: center;
+    }
+
+}
